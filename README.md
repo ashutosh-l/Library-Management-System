@@ -6,79 +6,81 @@ Ashutosh
 Problem statement :   Create  a dynamic web page for the Library  Management System 
 With 2 role (Librarian and Admin) 
 
-Workflow Explanation: 
-HTML Form Submission: 
-The process starts when a user submits an HTML form to request a book or  to remove a student  etc . 
-The form data includes information such as student ID, book ID, or student ID to be removed. 
-Servlet Handling: 
-Upon form submission, the servlet (BookRequestServlet ,  RemoveStudentServlet  etc) intercepts the request. 
-It extracts the relevant data from the request parameters (e.g., student ID, book ID). 
-The servlet then interacts with the LibraryManagementSystem class to perform the requested action (e.g., borrowing a book, removing a student). 
-Database Interaction: 
-The LibraryManagementSystem class interacts with the database to perform operations like borrowing a book , removing a student, adding a student. 
-It executes SQL queries to insert, update, or delete records in the database tables (students, books, etc.). 
-The LibraryManagementSystem class handles database connections, queries, and exception handling. 
-Error Handling: 
-If any errors occur during database operations (e.g., SQLException), they are caught by the servlet. 
-The servlet then sends an appropriate response to the client, either displaying an error message or logging the error for debugging. 
+                                                                              Workflow Explanation: 
+  HTML Form Submission: 
+      The process starts when a user submits an HTML form to request a book or  to remove a student  etc . 
+      The form data includes information such as student ID, book ID, or student ID to be removed. 
+  Servlet Handling: 
+      Upon form submission, the servlet (BookRequestServlet ,  RemoveStudentServlet  etc) intercepts the request. 
+      It extracts the relevant data from the request parameters (e.g., student ID, book ID). 
+      The servlet then interacts with the LibraryManagementSystem class to perform the requested action (e.g., borrowing a book, removing a student). 
+  Database Interaction: 
+      The LibraryManagementSystem class interacts with the database to perform operations like borrowing a book , removing a student, adding a student. 
+      It executes SQL queries to insert, update, or delete records in the database tables (students, books, etc.). 
+      The LibraryManagementSystem class handles database connections, queries, and exception handling. 
+  Error Handling: 
+      If any errors occur during database operations (e.g., SQLException), they are caught by the servlet. 
+      The servlet then sends an appropriate response to the client, either displaying an error message or logging the error for debugging. 
  
  
-User Roles and Functions 
-Admin Role 
-Add Student: Adds new student records to the database. 
-HTML Form: Add_student.html 
-Servlet: AddStudentServlet.java 
-Add Book: Allows entry of new books into the database. 
-HTML Form: Add_book.html 
-Servlet: AddBookServlet.java 
-Block/Unblock Student: Changes the status of a student's account. 
-HTML Form: Block.html 
-Servlet: SetStudentActiveStatusServlet.java 
-Generate PDF: Triggers the creation of a PDF report. 
-HTML Button: pdf_generation.html 
-Servlet: BookReportServlet.java 
-View Defaulter: Lists students with overdue books. 
-HTML Page: defaulter.html 
-Servlet: OverdueBooksServlet.java 
-Change Password: Allows users to change their passwords. 
-JSP: password_changed.jsp 
-Servlet: ChangePasswordServlet.java 
-Remove Student: Removes a student's record from database. 
-HTML Form: remove_student.html 
-Servlet: RemoveStudentServlet.java 
-Modify Student Details: Updates student information. 
-HTML Form: modify_student.html 
-Servlet: ModifyStudentServlet.java 
- 
-Librarian Role 
-Renew Book: Renews a book . 
-HTML Form: renew.html 
-Servlet: BookRenewServlet.java 
-Search Book: Searches the book . 
-HTML Form: search.html 
-Servlet: SearchBookServlet.java 
-Available Book: Views books available for borrow. 
-HTML List: available_books.html 
-Servlet: AvailableBooksServlet.java 
-Check Book Status: Checks the availability of a book. 
-HTML Form: check_book_status.html 
-Servlet: CheckBookStatusServlet.java 
-Student Role 
-Request Book: Requests a book for borrow. 
-HTML Form: request.html 
-Servlet: RequestBookServlet.java 
-Return Book: Processes the return of a borrowed book. 
-HTML Form: return.html 
-Servlet: ReturnBookServlet.java 
- 
- 
-Web Page Entry Points 
-Index.jsp: Serves as the entry page for users to log in. 
-Admin.html: Directs to admin-specific functions and operations. 
-Librarian.html: Leads to librarian-specific features and system management. 
-Student.html: Allows students to access features like book requests and returns. 
- 
+                                                                          User Roles and Functions 
+    Admin Role 
+      Add Student: Adds new student records to the database. 
+          HTML Form: Add_student.html 
+          Servlet: AddStudentServlet.java 
+      Add Book: Allows entry of new books into the database. 
+          HTML Form: Add_book.html 
+          Servlet: AddBookServlet.java 
+      Block/Unblock Student: Changes the status of a student's account. 
+          HTML Form: Block.html 
+          Servlet: SetStudentActiveStatusServlet.java 
+      Generate PDF: Triggers the creation of a PDF report. 
+          HTML Button: pdf_generation.html 
+          Servlet: BookReportServlet.java 
+      View Defaulter: Lists students with overdue books. 
+          HTML Page: defaulter.html 
+          Servlet: OverdueBooksServlet.java 
+      Change Password: Allows users to change their passwords. 
+          JSP: password_changed.jsp 
+          Servlet: ChangePasswordServlet.java 
+      Remove Student: Removes a student's record from database. 
+          HTML Form: remove_student.html 
+          Servlet: RemoveStudentServlet.java 
+      Modify Student Details: Updates student information. 
+          HTML Form: modify_student.html 
+          Servlet: ModifyStudentServlet.java 
+     
+    Librarian Role 
+      Renew Book: Renews a book . 
+          HTML Form: renew.html 
+          Servlet: BookRenewServlet.java 
+      Search Book: Searches the book . 
+          HTML Form: search.html 
+          Servlet: SearchBookServlet.java 
+      Available Book: Views books available for borrow. 
+          HTML List: available_books.html 
+          Servlet: AvailableBooksServlet.java 
+      Check Book Status: Checks the availability of a book. 
+          HTML Form: check_book_status.html 
+          Servlet: CheckBookStatusServlet.java 
 
+          
+    Student Role 
+      Request Book: Requests a book for borrow. 
+          HTML Form: request.html 
+          Servlet: RequestBookServlet.java 
+      Return Book: Processes the return of a borrowed book. 
+          HTML Form: return.html 
+          Servlet: ReturnBookServlet.java 
+     
+ 
+                                                                                  Web Page Entry Points 
+        Index.jsp: Serves as the entry page for users to log in. 
+        Admin.html: Directs to admin-specific functions and operations. 
+        Librarian.html: Leads to librarian-specific features and system management. 
+        Student.html: Allows students to access features like book requests and returns. 
+ 
+                                                                                   Admin
 
 Admin: This is a user role within the system. An admin likely has permissions to manage the system, including managing books, students, and librarian accounts. 
 
@@ -98,7 +100,9 @@ Remove Student: This admin function would remove a student's record. The HTML(re
 Modify Student Details: This function allows an admin to update student name. The HTML(modify_student.html) would include a form to input the studentID, and the servlet(ModifyStudentServlet.java)  process the updates in the student. 
  
 
- 
+                                                                                  Librarian
+
+                                                                                  
 Librarian: Another user role with its specific set of permissions, potentially including managing book and see the available . 
 
 Renew: A librarian or student function to renew a book . The HTML(renew.html)  be a form to input book ID and student ID, and the servlet(BookRenewServlet.java) would update the renewal coloumnss from the student_book table in the database. 
@@ -111,7 +115,7 @@ Check Status: This allow users to check the status of a book, such as whether it
 Librarian.html 
 
 
-
+                                                                                                  Student
 Student: This is a user role. Students likely have access the student section like request book and return book and change the student password 
 
 Request Book: A student feature to request a  book from the books table in the database. This would require a form in HTML(request.html) and a servlet(RequestBookServlet.java) to handle the request and after the Successfull submission the book is borrowed to that student and data is updated in the student_book table and the book table(borrowed=1). 
